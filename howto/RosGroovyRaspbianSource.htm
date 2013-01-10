@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+<meta name="google-site-verification" content="CjkdY6BqKWAVmQ78_iSq6J7ZZ9AoL7-CjFVBYGg9FU4">
+<script src="Source/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="Source/sorttable.js"></script>
+<script type="text/javascript" src="Source/ASCIIMathML.js"></script>
+<script type="text/javascript" src="Source/jquery-1.js"></script>                         
+<script type="text/javascript" src="Source/seesaw.js"></script> 
+<script type="text/javascript" src="Source/rosversion.js"></script> 
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17821189-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="index,nofollow">
+
+<title>groovy/Installation/Raspbain/Source - ROS Wiki</title>
+<script type="text/javascript" src="Source/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Suche";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="Source/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="Source/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="Source/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="Source/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static193/rostheme/css/msie.css">
+<![endif]-->
+
+
+
+
+
+<link rel="Start" href="http://www.ros.org/wiki/Documentation">
+<link rel="Alternate" title="Wiki Quelltext" href="http://www.ros.org/wiki/groovy/Installation/Raspbain/Source?action=raw">
+<link rel="Alternate" media="print" title="Druckansicht" href="http://www.ros.org/wiki/groovy/Installation/Raspbain/Source?action=print">
+<link rel="Search" href="http://www.ros.org/wiki/FindPage">
+<link rel="Index" href="http://www.ros.org/wiki/TitleIndex">
+<link rel="Glossary" href="http://www.ros.org/wiki/WordIndex">
+<link rel="Help" href="http://www.ros.org/wiki/HelpOnFormatting">
+</head>
+
+<body dir="ltr" lang="de">
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="Source/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5950817-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+
+function handleSubmit() {
+  var f = document.getElementById('searchform');
+  var t = document.getElementById('searchinput');
+  var r = document.getElementById('real_searchinput');
+  
+  //alert("handleSubmit "+ t.value);
+  if(t.value.match(/review/)) {
+    r.value = t.value;
+  } else {
+    //r.value = t.value + " -PackageReviewCategory -StackReviewCategory -M3Review -DocReview -ApiReview -HelpOn -BadContent -LocalSpellingWords";
+    r.value = t.value + " -PackageReviewCategory -StackReviewCategory -DocReview -ApiReview";
+  }
+  //return validate(f);
+}
+//-->
+</script>
+
+<div id="dpage">
+  <div id="dpage-inner">
+    <div id="header"><div id="topnav">
+      <table id="topnav-table">
+        <tbody><tr>
+          <td valign="top" width="300"><a href="http://www.ros.org/"><img src="Source/ros_org.png" alt="ros.org" border="0" height="51" width="238"></a></td>
+          <td valign="middle">
+            <a href="http://www.ros.org/wiki/About%20ros.org">About</a>
+            |
+            <a href="http://www.ros.org/wiki/Support">Support</a>
+            |
+            <a href="http://answers.ros.org/">answers.ros.org</a>
+
+<!--   <a href="http://roscon.ros.org/?page_id=109"><img align="middle" style="padding-left: 15px;" src="http://ros.org/images/roscon_wiki_header.png" width="133" height="38" alt="roscon" /></a> -->
+
+          </td>
+
+          <td align="right" valign="middle">
+
+<script language="Javascript">
+
+function Searchy(theButton){
+
+theForm = theButton.form;
+newID = theForm.input.value;
+theForm.q.value = newID;
+theForm.input.value=theForm.input.value
+
+}
+</script>
+
+
+<form action="http://www.ros.org/search/index.html" id="cse">
+  <div>
+    <label>Search:</label>
+    <input name="cx" value="013029357434904786434:afn5eukzpgg" type="hidden">
+    <input name="cof" value="FORID:11;NB:1" type="hidden">
+    <input name="filter" value="0" type="hidden">
+    <input name="num" value="10" type="hidden">
+
+    <input name="ie" value="UTF-8" type="hidden">
+    <input name="input" id="input" autocomplete="on" style="width: 35%" type="text">
+    <input name="q" value="" type="hidden">
+    <input name="sa" value="Submit" onclick="Searchy(this)" type="submit">
+
+  </div>
+</form>
+
+         </td>
+      </tr>
+      <tr>
+        <td colspan="3" height="53" width="1024"><nobr><img src="Source/menu_left.png" alt="" height="53" width="17"><a href="http://www.ros.org/wiki/"><img src="Source/menu_documentation.png" alt="Documentation" border="0" height="53" width="237"></a><img src="Source/menu_spacer.png" height="53" width="69"><a href="http://www.ros.org/browse/"><img src="Source/menu_browse_software.png" alt="Browse Software" border="0" height="53" width="268"></a><img src="Source/menu_spacer.png" height="53" width="69"><a href="http://www.ros.org/news"><img src="Source/menu_news.png" alt="News" border="0" height="53" width="84"></a><img src="Source/menu_spacer.png" height="53" width="69"><a href="http://www.ros.org/wiki/ROS/Installation"><img src="Source/menu_download.png" alt="Download" border="0" height="53" width="151"></a><img src="Source/menu_right.png" height="53" width="60"></nobr></td>
+
+      </tr>
+    </tbody></table> <!-- topnav-table -->
+
+    </div> <!-- /#topav -->
+  </div> <!-- /#header -->
+
+
+<div id="header2">
+
+<ul id="pagelocation">
+<li><a href="http://www.ros.org/wiki/groovy">groovy</a></li><li><a href="http://www.ros.org/wiki/groovy/Installation">Installation</a></li><li><a class="nonexistent" href="http://www.ros.org/wiki/groovy/Installation/Raspbain">Raspbain</a></li><li><a class="backlink" href="http://www.ros.org/wiki/groovy/Installation/Raspbain/Source?action=fullsearch&amp;context=180&amp;value=linkto%3A%22groovy%2FInstallation%2FRaspbain%2FSource%22" rel="nofollow" title="Hier klicken für eine Liste der Seiten, die auf diese verweisen">Source</a></li>
+</ul>
+
+<div id="locationline">
+</div>
+</div>
+
+<div id="sidebar">
+<div class="sidepanel">
+<h1>Wiki</h1>
+
+<ul id="navibar">
+<li class="wikilink"><a href="http://www.ros.org/wiki/ROS">ROS</a></li><li class="wikilink"><a href="http://www.ros.org/wiki/StackList">StackList</a></li><li class="wikilink"><a href="http://www.ros.org/wiki/RecentChanges">RecentChanges</a></li><li class="current"><a href="http://www.ros.org/wiki/groovy/Installation/Raspbain/Source">Source</a></li>
+</ul>
+
+</div>
+<div class="sidepanel">
+<h1>Seite</h1>
+<ul class="editbar"><li><span class="disabled">Geschützte Seite</span></li><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onclick="toggleComments();return false;">Kommentare</a></li><li><a class="nbinfo" href="http://www.ros.org/wiki/groovy/Installation/Raspbain/Source?action=info" rel="nofollow">Info</a></li><li><a class="nbattachments" href="http://www.ros.org/wiki/groovy/Installation/Raspbain/Source?action=AttachFile" rel="nofollow">Dateianhänge</a></li><li>
+<form class="actionsmenu" method="GET" action="/wiki/groovy/Installation/Raspbain/Source">
+<div>
+    
+    <select name="action" onchange="if ((this.selectedIndex != 0) &amp;&amp;
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option selected="selected" value="show">Weitere Aktionen:</option><option value="raw">Rohform</option>
+<option value="print">Druckansicht</option>
+<option value="show" disabled="disabled" class="disabled">Cache löschen</option>
+<option value="show" disabled="disabled" class="disabled">-----------------------------------</option>
+<option value="SpellCheck">Rechtschreibung prüfen</option>
+<option value="LikePages">Ähnliche Seiten</option>
+<option value="LocalSiteMap">ÜbersichtsKarte</option>
+<option value="show" disabled="disabled" class="disabled">-----------------------------------</option>
+<option value="RenamePage" disabled="disabled" class="disabled">Seite umbenennen</option>
+<option value="DeletePage" disabled="disabled" class="disabled">Seite löschen</option>
+<option value="show" disabled="disabled" class="disabled">-----------------------------------</option>
+<option value="show" disabled="disabled" class="disabled">Abo für Benutzer</option>
+<option value="show" disabled="disabled" class="disabled">-----------------------------------</option>
+<option value="show" disabled="disabled" class="disabled">Spam entfernen</option>
+<option value="show" disabled="disabled" class="disabled">Diese Revision restaurieren</option>
+<option value="PackagePages">Seiten paketieren</option>
+<option value="SyncPages">Seiten synchronisieren</option>
+<option value="show" disabled="disabled" class="disabled">-----------------------------------</option>
+<option value="CreatePdfDocument">CreatePdfDocument</option>
+<option value="Load">Laden</option>
+<option value="RawFile">RawFile</option>
+<option value="Save">Speichern</option>
+<option value="SlideShow">SlideShow</option>
+    </select>
+    
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('Weitere Aktionen:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+<div class="sidepanel">
+<h1>Benutzer</h1>
+<ul id="username"><li><a href="http://www.ros.org/wiki/groovy/Installation/Raspbain/Source?action=login" id="login" rel="nofollow">Anmelden</a></li></ul>
+</div>
+</div>
+
+<div id="page" dir="ltr" lang="en">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867">
+</p><h1 id="Installing_on_Raspberry_PI.2BAC8-Raspbian_from_source">Installing on Raspberry PI/Raspbian from source</h1>
+<span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line874">Install from source requires that you download and compile the source code on your own. <span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span></p><p class="line874">Do the initial software install of Raspbian wheezy 2012-12-16-wheezy-raspbian on your SD card. <span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span></p><p class="line874">Do your initial configuration of the platform. <span class="anchor" id="line-8"></span></p><ul><li style="list-style-type:none"><span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><pre><span class="anchor" id="line-1-1"></span>sudo apt-get update
+<span class="anchor" id="line-2-1"></span>sudo apt-get upgrade
+<span class="anchor" id="line-3-1"></span>sudo apt-get install python-pip</pre><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span></li></ul><p class="line867"></p><div class="table-of-contents"><p class="table-of-contents-heading">Inhaltsverzeichnis</p><ol><li>
+<a href="#Installing_on_Raspberry_PI.2BAC8-Raspbian_from_source">Installing on Raspberry PI/Raspbian from source</a><ol><li>
+<a href="#Installation">Installation</a><ol><li>
+<a href="#Setup">Setup</a></li></ol></li><li>
+<a href="#ROS_Installation">ROS Installation</a><ol><li>
+<a href="#Building_the_catkin_Packages">Building the catkin Packages</a><ol><li>
+<a href="#Create_a_catkin_Workspace">Create a catkin Workspace</a></li><li>
+<a href="#Resolving_Dependencies">Resolving Dependencies</a></li><li>
+<a href="#Building_the_catkin_Workspace">Building the catkin Workspace</a></li></ol></li><li>
+<a href="#Build_the_rosbuild_Packages">Build the rosbuild Packages</a><ol><li>
+<a href="#Create_a_rosbuild_workspace">Create a rosbuild workspace</a></li><li>
+<a href="#Download_ROS_Stacks">Download ROS Stacks</a></li><li>
+<a href="#Build_the_ROS_Stack">Build the ROS Stack</a></li></ol></li></ol></li></ol></li></ol></div><p class="line874"> <span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span></p><p class="line867">
+</p><h2 id="Installation">Installation</h2>
+<span class="anchor" id="line-18"></span><p class="line867">
+</p><h3 id="Setup">Setup</h3>
+<span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><p class="line874">Install bootstrap dependencies (Raspbian): <span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span></p><p class="line874">Now to install some of the OS packages that we need for ROS. <span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span></p><ul><li style="list-style-type:none"><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><pre><span class="anchor" id="line-1-2"></span>$ sudo apt-get install build-essential python-yaml cmake subversion wget
+<span class="anchor" id="line-2-2"></span>python-setuptools mercurial git-core</pre><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span></li></ul><p class="line874">Install Core Library dependencies (aka, 'ROS BASE"): <span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span></p><ul><li style="list-style-type:none"><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><pre><span class="anchor" id="line-1-3"></span>$ sudo apt-get install libapr1-dev libaprutil1-dev libbz2-dev python-dev 
+<span class="anchor" id="line-2-3"></span>libgtest-dev python-paramiko libboost-all-dev liblog4cxx10-dev pkg-config
+<span class="anchor" id="line-3-2"></span>python-empy swig python-nose</pre><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span></li></ul><p class="line874">Next, you install graphical library dependencies, if you plan on using  <span class="anchor" id="line-39"></span>ROS graphical tools (aka 'ROS FUll'): <span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span></p><ul><li style="list-style-type:none"><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><pre><span class="anchor" id="line-1-4"></span>$ sudo apt-get install python-wxgtk2.8 python-gtk2 python-matplotlib
+<span class="anchor" id="line-2-4"></span> libwxgtk2.8-dev python-imaging libqt4-dev graphviz qt4-qmake python-numpy
+<span class="anchor" id="line-3-3"></span> libtiff-dev libpoco-dev assimp-utils lsb-release libtinyxml-dev python-pydot</pre><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span></li></ul><p class="line874">Next, you must get the wstool, rospkg, rosdep and install it. <span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span></p><ul><li style="list-style-type:none"><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><pre><span class="anchor" id="line-1-5"></span>$ sudo easy_install wstool
+<span class="anchor" id="line-2-5"></span>$ sudo easy_install rospkg
+<span class="anchor" id="line-3-4"></span>$ sudo easy_install rosdep </pre><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span></li></ul><p class="line874">Next, you must build swig-wx from source if you wish to use the graphical tools in <span class="anchor" id="line-56"></span>ROS in the installation.  swig-wx requires bison and the GNU autotools to build. <span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span></p><ul><li style="list-style-type:none"><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><pre><span class="anchor" id="line-1-6"></span>$sudo apt-get install bison++ automake autoconf
+<span class="anchor" id="line-2-6"></span>git clone https://github.com/ros/swig-wx.git
+<span class="anchor" id="line-3-5"></span>cd swig-wx
+<span class="anchor" id="line-4-1"></span>./autogen.sh &amp;&amp; ./configure &amp;&amp; make &amp;&amp; sudo make install</pre><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span></li></ul><p class="line867"><span class="anchor" id="line-70"></span></p><p class="line867">
+</p><h2 id="ROS_Installation">ROS Installation</h2>
+<span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><p class="line874">Start by building the core ROS packages. <span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span></p><p class="line874">First create the area in the directories that we will be using: <span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span></p><ul><li style="list-style-type:none"><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><pre><span class="anchor" id="line-1-7"></span>$sudo mkdir /opt/ros
+<span class="anchor" id="line-2-7"></span>$sudo mkdir /opt/ros/groovy
+<span class="anchor" id="line-3-6"></span>cd /opt/ros/groovy</pre><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span></li></ul><p class="line874">Next ensure rosdep has been initialized: <span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span></p><ul><li style="list-style-type:none"><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><pre><span class="anchor" id="line-1-8"></span>$ sudo rosdep init
+<span class="anchor" id="line-2-8"></span>$ rosdep update</pre><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span></li></ul><p class="line867">
+</p><h3 id="Building_the_catkin_Packages">Building the catkin Packages</h3>
+<span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><p class="line862">ROS is in the process of converting to a new build system, <a href="http://www.ros.org/wiki/catkin">catkin</a>,
+ but not all of the packages have been converted and the two build 
+systems cannot be used simultaneously. Therefore it is necessary to 
+build the core ROS packages first (catkin packages) and then the rest. <span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span></p><p class="line867">
+</p><h4 id="Create_a_catkin_Workspace">Create a catkin Workspace</h4>
+<span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><p class="line874">In order to build the core packages, you will need a catkin workspace. Create one now: <span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span></p><ul><li style="list-style-type:none"><span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><span class="anchor" id="line-100"></span><pre><span class="anchor" id="line-1-9"></span>$ mkdir /opt/ros/groovy/ros_catkin_ws
+<span class="anchor" id="line-2-9"></span>$ cd /opt/ros/groovy/ros_catkin_ws</pre><span class="anchor" id="line-101"></span><span class="anchor" id="line-102"></span></li></ul><p class="line862">Next we will want to fetch the core packages so we can build them. We will use <tt class="backtick">wstool</tt> for this. Select the <tt class="backtick">wstool</tt> command for the particular variant you want to install: <span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span></p><p class="line867"><strong>ROS-Comm: (Bare Bones)</strong> ROS package, build, and communication libraries. No GUI tools. <span class="anchor" id="line-105"></span><span class="anchor" id="line-106"></span></p><ul><li style="list-style-type:none"><span class="anchor" id="line-107"></span><span class="anchor" id="line-108"></span><pre><span class="anchor" id="line-1-10"></span>$ wstool init src -j1 http://packages.ros.org/web/rosinstall/generate/raw/groovy/ros_comm</pre><span class="anchor" id="line-109"></span><span class="anchor" id="line-110"></span><span class="anchor" id="line-111"></span><span class="anchor" id="line-112"></span></li></ul><p class="line867"><strong>Desktop Install (recommended): </strong> ROS, <a href="http://www.ros.org/wiki/rqt">rqt</a>, <a href="http://www.ros.org/wiki/rviz">rviz</a>, and robot-generic libraries <span class="anchor" id="line-113"></span></p><ul><li style="list-style-type:none"><span class="anchor" id="line-114"></span><span class="anchor" id="line-115"></span><pre><span class="anchor" id="line-1-11"></span>$ wstool init -j1 src http://packages.ros.org/web/rosinstall/generate/raw/groovy/desktop</pre><span class="anchor" id="line-116"></span><span class="anchor" id="line-117"></span><span class="anchor" id="line-118"></span></li></ul><p class="line867"><strong>Desktop-Full Install: </strong> ROS, <a href="http://www.ros.org/wiki/rqt">rqt</a>, <a href="http://www.ros.org/wiki/rviz">rviz</a>, robot-generic libraries, 2D/3D simulators, navigation and 2D/3D perception  <span class="anchor" id="line-119"></span></p><ul><li style="list-style-type:none"><span class="anchor" id="line-120"></span><span class="anchor" id="line-121"></span><pre><span class="anchor" id="line-1-12"></span>$ wstool init -j1 src http://packages.ros.org/web/rosinstall/generate/raw/groovy/desktop-full</pre><span class="anchor" id="line-122"></span><span class="anchor" id="line-123"></span><span class="anchor" id="line-124"></span><span class="anchor" id="line-125"></span><div class="red solid"><span class="anchor" id="line-1-13"></span><p class="line862">There are build errors in desktop-full (gazebo simulator) at the moment, so the desktop variant is suggested at this time. See: <a class="https" href="https://code.ros.org/trac/ros-pkg/ticket/5595">https://code.ros.org/trac/ros-pkg/ticket/5595</a> </p></div><span class="anchor" id="line-126"></span><span class="anchor" id="line-127"></span></li></ul><p class="line862">This will add all of the <tt class="backtick">catkin</tt> or <tt class="backtick">wet</tt> packages in the given variant and then fetch the sources into the <tt class="backtick">/opt/ros/groovy/ros_catkin_ws/src</tt> directory. The command will take a few minutes to download all of the core ROS packages into the <tt class="backtick">src</tt> folder. <span class="anchor" id="line-128"></span>The <tt class="backtick">-j8</tt> option downloads 8 packages in parallel.  Since this will not work with <span class="anchor" id="line-129"></span>the Raspberry Pi hardware we use the <tt class="backtick">-j1</tt> for a single package at a time. <span class="anchor" id="line-130"></span><span class="anchor" id="line-131"></span></p><p class="line867"><span class="anchor" id="line-132"></span><span class="anchor" id="line-133"></span><span class="anchor" id="line-134"></span><span class="anchor" id="line-135"></span><span class="anchor" id="line-136"></span><span class="anchor" id="line-137"></span></p><div class="blue solid"><span class="anchor" id="line-1-14"></span><p class="line862">In addition to the 3 variants above, more are defined in <a class="http" href="http://ros.org/reps/rep-0131.html#variants">REP 131</a> such as <tt class="backtick">robot</tt>, <tt class="backtick">perception</tt>, etc. Just change the package path to the one you want, e.g., for <tt class="backtick">robot</tt> do: <span class="anchor" id="line-2-10"></span><span class="anchor" id="line-3-7"></span></p><p class="line867"><span class="anchor" id="line-4-2"></span><span class="anchor" id="line-5-1"></span></p><pre><span class="anchor" id="line-1-15"></span>$ wstool init -j1 http://packages.ros.org/web/rosinstall/generate/dry/raw/groovy/robot</pre></div><span class="anchor" id="line-138"></span><span class="anchor" id="line-139"></span><p class="line867">
+</p><h4 id="Resolving_Dependencies">Resolving Dependencies</h4>
+<span class="anchor" id="line-140"></span><span class="anchor" id="line-141"></span><p class="line862">Before you can build your catkin workspace you need to make sure that you have all the required dependencies. We use the <tt class="backtick">rosdep</tt> tool for this: <span class="anchor" id="line-142"></span><span class="anchor" id="line-143"></span><span class="anchor" id="line-144"></span></p><ul><li style="list-style-type:none"><span class="anchor" id="line-145"></span><span class="anchor" id="line-146"></span><pre><span class="anchor" id="line-1-16"></span>$ rosdep install --from-paths src --ignore-src --rosdistro groovy -y</pre><span class="anchor" id="line-147"></span><span class="anchor" id="line-148"></span></li></ul><p class="line862">This will look at all of the packages in the <tt class="backtick">src</tt> directory and find all of the dependencies they have. Then it will recursively install the dependencies. <span class="anchor" id="line-149"></span><span class="anchor" id="line-150"></span></p><p class="line862">The <tt class="backtick">--from-paths</tt> option indicates we want to install the dependencies for an entire directory of packages, in this case <tt class="backtick">src</tt>. The <tt class="backtick">--ignore-src</tt> option indicates to rosdep that it shouldn't try to install any ROS packages in the <tt class="backtick">src</tt> folder from the package manager, we don't need it to since we are building them ourselves. The <tt class="backtick">--rosdistro</tt>
+ option is required because we don't have a ROS environment setup yet, 
+so we have to indicate to rosdep what version of ROS we are building 
+for. Finally, the <tt class="backtick">-y</tt> option indicates to rosdep that we don't want to be bothered by too many prompts from the package manager. <span class="anchor" id="line-151"></span><span class="anchor" id="line-152"></span></p><p class="line874">After
+ a while (and maybe some prompts for your password) rosdep will finish 
+installing system dependencies and you can continue. <span class="anchor" id="line-153"></span><span class="anchor" id="line-154"></span></p><p class="line867"></p><hr class="hr6"><p class="line874"> <span class="anchor" id="line-155"></span><span class="anchor" id="line-156"></span></p><p class="line867">
+</p><h4 id="Building_the_catkin_Workspace">Building the catkin Workspace</h4>
+<span class="anchor" id="line-157"></span><span class="anchor" id="line-158"></span><p class="line862">Once
+ it has completed downloading the packages and resolving the 
+dependencies you are ready to build the catkin packages. We will use the
+ <tt class="backtick">catkin_make_isolated</tt> command because there 
+are both catkin and plain cmake packages in the base install, when 
+developing on your catkin only workspaces you should use <a href="http://www.ros.org/wiki/catkin/commands/catkin_make">catkin/commands/catkin_make</a>.  <span class="anchor" id="line-159"></span><span class="anchor" id="line-160"></span></p><p class="line862">Invoke <tt class="backtick">catkin_make_isolated</tt>: <span class="anchor" id="line-161"></span><span class="anchor" id="line-162"></span></p><ul><li style="list-style-type:none"><span class="anchor" id="line-163"></span><span class="anchor" id="line-164"></span><pre><span class="anchor" id="line-1-17"></span>$ ./src/catkin/bin/catkin_make_isolated --install</pre><span class="anchor" id="line-165"></span><span class="anchor" id="line-166"></span><span class="anchor" id="line-167"></span></li></ul><p class="line867"><span class="anchor" id="line-168"></span><span class="anchor" id="line-169"></span><span class="anchor" id="line-170"></span><span class="anchor" id="line-171"></span><span class="anchor" id="line-172"></span><span class="anchor" id="line-173"></span><span class="anchor" id="line-174"></span></p><div class="blue solid"><span class="anchor" id="line-1-18"></span><p class="line867"><strong>Note:</strong> The default catkin installation location would be <tt class="backtick">~/ros_catkin_ws/install_isolated</tt>, if you would like to install some where else then you can do this by adding the <tt class="backtick">--install-space&nbsp;/opt/ros/groovy</tt> argument to your <tt class="backtick">catkin_make_isolated</tt> call.  <span class="anchor" id="line-2-11"></span><span class="anchor" id="line-3-8"></span></p><p class="line862">For usage on a robot without Raspbain, it is recommended to install compiled code into <tt class="backtick">/opt/ros/groovy</tt> just as the Raspbain packages would do.  <span class="anchor" id="line-4-3"></span>It is also possible to install elsewhere (e.g. <tt class="backtick">/usr</tt>), but it is not recommended unless you really know what you are doing. <span class="anchor" id="line-5-2"></span><span class="anchor" id="line-6-1"></span></p><p class="line862">Please see <a class="http" href="http://ros.org/reps/rep-0122.html">REP 122: Filesystem Hierarchy Layout</a> for more detailed documentation on how the installed files are placed. </p></div><span class="anchor" id="line-175"></span><span class="anchor" id="line-176"></span><p class="line867"><span class="anchor" id="line-177"></span><span class="anchor" id="line-178"></span></p><div class="blue solid"><span class="anchor" id="line-1-19"></span><p class="line867"><strong>Note:</strong> In the above command we are running the <tt class="backtick">catkin_make_isolated</tt> command from the catkin source folder because it has not been installed yet, once installed it can be called directly. </p></div><span class="anchor" id="line-179"></span><span class="anchor" id="line-180"></span><p class="line862">Now the packages should have been installed to <tt class="backtick">~/ros_catkin_ws/install_isolated</tt> or to wherever you specified with the <tt class="backtick">--install-space</tt> argument. If you look in that directory you will see that a <tt class="backtick">setup.bash</tt>
+ file have been generated. To utilize the things installed there simply 
+source that file. Lets do that now before building the rest of ROS: <span class="anchor" id="line-181"></span><span class="anchor" id="line-182"></span></p><ul><li style="list-style-type:none"><span class="anchor" id="line-183"></span><span class="anchor" id="line-184"></span><pre><span class="anchor" id="line-1-20"></span>$ source /opt/ros/groovy/ros_catkin_ws/install_isolated/setup.bash</pre><span class="anchor" id="line-185"></span><span class="anchor" id="line-186"></span><span class="anchor" id="line-187"></span><span class="anchor" id="line-188"></span><span class="anchor" id="line-189"></span><div class="red solid"><span class="anchor" id="line-1-21"></span><p class="line874">Once I am past this issue I will update this doc accordingly. </p></div><span class="anchor" id="line-190"></span><span class="anchor" id="line-191"></span><span class="anchor" id="line-192"></span></li></ul><p class="line867">
+</p><h3 id="Build_the_rosbuild_Packages">Build the rosbuild Packages</h3>
+<span class="anchor" id="line-193"></span><span class="anchor" id="line-194"></span><p class="line862">Now that you have the catkin ROS packages built and sourced, you can build any of the packages and stacks using the <a href="http://www.ros.org/wiki/rosbuild">rosbuild</a> build system. <span class="anchor" id="line-195"></span><span class="anchor" id="line-196"></span></p><p class="line867">
+</p><h4 id="Create_a_rosbuild_workspace">Create a rosbuild workspace</h4>
+<span class="anchor" id="line-197"></span><span class="anchor" id="line-198"></span><p class="line867"><span class="anchor" id="line-199"></span><span class="anchor" id="line-200"></span></p><div class="blue solid"><span class="anchor" id="line-1-22"></span><p class="line867"><strong>Note:</strong> You do not need to do this part of the installation for the <strong>ROS-Comm: (Bare Bones)</strong> variant as it does not contain any rosbuild packages in it. </p></div><span class="anchor" id="line-201"></span><span class="anchor" id="line-202"></span><p class="line862">Like with building <a href="http://www.ros.org/wiki/catkin">catkin</a> packages, it is convenient to build <a href="http://www.ros.org/wiki/rosbuild">rosbuild</a> packages in a workspace. Lets create a ROS workspace using <tt class="backtick">rosws</tt>: <span class="anchor" id="line-203"></span><span class="anchor" id="line-204"></span></p><ul><li style="list-style-type:none"><span class="anchor" id="line-205"></span><span class="anchor" id="line-206"></span><span class="anchor" id="line-207"></span><span class="anchor" id="line-208"></span><pre><span class="anchor" id="line-1-23"></span>$ mkdir ~/ros_ws
+<span class="anchor" id="line-2-12"></span>$ cd ~/ros_ws
+<span class="anchor" id="line-3-9"></span>$ rosws init . ~/ros_catkin_ws/install_isolated</pre><span class="anchor" id="line-209"></span><span class="anchor" id="line-210"></span></li></ul><p class="line874">Note
+ that we are pointing the ROS workspace to the catkin install location 
+that we built in the previous step. This allows the ROS workspace to 
+always source the catkin install location environment before you use the
+ ROS workspace. <span class="anchor" id="line-211"></span><span class="anchor" id="line-212"></span></p><p class="line867">
+</p><h4 id="Download_ROS_Stacks">Download ROS Stacks</h4>
+<span class="anchor" id="line-213"></span><span class="anchor" id="line-214"></span><p class="line874">Now
+ we need to get the dry (rosbuild) components of the variant you chose 
+before.  Use the corresponding command for your variant to do this: <span class="anchor" id="line-215"></span><span class="anchor" id="line-216"></span><span class="anchor" id="line-217"></span></p><p class="line867"><strong>Desktop Install (recommended): </strong> ROS, <a href="http://www.ros.org/wiki/rqt">rqt</a>, <a href="http://www.ros.org/wiki/rviz">rviz</a>, and robot-generic libraries <span class="anchor" id="line-218"></span></p><ul><li style="list-style-type:none"><span class="anchor" id="line-219"></span><span class="anchor" id="line-220"></span><pre><span class="anchor" id="line-1-24"></span>$ rosws merge http://packages.ros.org/web/rosinstall/generate/dry/raw/groovy/desktop</pre><span class="anchor" id="line-221"></span><span class="anchor" id="line-222"></span><span class="anchor" id="line-223"></span><span class="anchor" id="line-224"></span><div class="red solid"><span class="anchor" id="line-1-25"></span><p class="line862">There are build errors in desktop (navigation) at the moment, as well, but can be manually fixed: <a class="https" href="https://github.com/ros-planning/navigation/issues/17">https://github.com/ros-planning/navigation/issues/17</a> </p></div><span class="anchor" id="line-225"></span><span class="anchor" id="line-226"></span></li></ul><p class="line867"><strong>Desktop-Full Install: </strong> 2d/3d simulators, navigation, robot models and several tutorial stacks  <span class="anchor" id="line-227"></span></p><ul><li style="list-style-type:none"><span class="anchor" id="line-228"></span><span class="anchor" id="line-229"></span><pre><span class="anchor" id="line-1-26"></span>$ rosws merge http://packages.ros.org/web/rosinstall/generate/dry/raw/groovy/desktop-full</pre><span class="anchor" id="line-230"></span><span class="anchor" id="line-231"></span><span class="anchor" id="line-232"></span><span class="anchor" id="line-233"></span><div class="red solid"><span class="anchor" id="line-1-27"></span><p class="line862">There are build errors in desktop-full (gazebo simulator) at the moment, so the desktop variant is suggested at this time. See: <a class="https" href="https://code.ros.org/trac/ros-pkg/ticket/5595">https://code.ros.org/trac/ros-pkg/ticket/5595</a> </p></div><span class="anchor" id="line-234"></span><span class="anchor" id="line-235"></span><span class="anchor" id="line-236"></span></li></ul><p class="line862">Now this just setups your rosbuild workspace, you need to tell <tt class="backtick">rosws</tt> to fetch the packages still: <span class="anchor" id="line-237"></span><span class="anchor" id="line-238"></span></p><ul><li style="list-style-type:none"><span class="anchor" id="line-239"></span><span class="anchor" id="line-240"></span><pre><span class="anchor" id="line-1-28"></span>$ rosws update -j1</pre><span class="anchor" id="line-241"></span><span class="anchor" id="line-242"></span></li></ul><p class="line867">
+</p><h4 id="Build_the_ROS_Stack">Build the ROS Stack</h4>
+<span class="anchor" id="line-243"></span><span class="anchor" id="line-244"></span><p class="line874">Once this is done fetching the stack you can source this workspace and then build the stack: <span class="anchor" id="line-245"></span><span class="anchor" id="line-246"></span></p><ul><li style="list-style-type:none"><span class="anchor" id="line-247"></span><span class="anchor" id="line-248"></span><span class="anchor" id="line-249"></span><pre><span class="anchor" id="line-1-29"></span>$ source ~/ros_ws/setup.bash
+<span class="anchor" id="line-2-13"></span>$ rosmake -a</pre><span class="anchor" id="line-250"></span><span class="anchor" id="line-251"></span></li></ul><p class="line867"><span class="anchor" id="line-252"></span><span class="anchor" id="bottom"></span></p></div></div>
+<div id="pagebottom"></div>
+</div>
+
+<p id="pageinfo" class="info" dir="ltr" lang="de">Wiki: groovy/Installation/Raspbain/Source  (zuletzt geändert am 2013-01-09 02:11:00 durch <span title="BobTeeter @ mn-69-34-66-136.sta.embarqhsd.net[69.34.66.136]"><a class="nonexistent" href="http://www.ros.org/wiki/BobTeeter" title="BobTeeter @ mn-69-34-66-136.sta.embarqhsd.net[69.34.66.136]">BobTeeter</a></span>)</p>
+
+
+
+
+<div class="footer">
+Except where otherwise noted, the ROS wiki is licensed under <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a>.
+</div>
+
+  </div> <!-- /#dpage-inner, /#dpage -->
+
+
+
+
+
+</body></html>
