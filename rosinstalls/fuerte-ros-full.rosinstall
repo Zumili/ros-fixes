@@ -48,5 +48,5 @@
     version: debian/ros-fuerte-std-msgs_0.4.11-0_lucid
 - git:
     local-name: rx
-    uri: git://github.com/wg-debs/rx-release.git
+    uri: git://github.com/ros-gbp/rx-release.git
     version: debian/ros-fuerte-rx_1.8.9-0_lucid
